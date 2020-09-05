@@ -54,15 +54,27 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DatakuViewHold
         // attach data object
         holder.txtNama.setText(dataList.get(position).getNama());
         holder.txtNpm.setText(dataList.get(position).getEmail());
-        holder.id.setText(dataList.get(position).getId());
+
+        holder.id = dataList.get(position).getId();
+        holder.nama = dataList.get(position).getNama();
+        holder.email = dataList.get(position).getEmail();
+        holder.alamat = dataList.get(position).getAlamat();
+        holder.nohp = dataList.get(position).getNohp();
+        holder.noktp = dataList.get(position).getNoktp();
 
 
         holder.detailCust.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), DetailCustomer.class);
+                intent.putExtra("id", holder.id);
+                intent.putExtra("nama", holder.nama);
+                intent.putExtra("email", holder.email);
+                intent.putExtra("alamat", holder.alamat);
+                intent.putExtra("nohp", holder.nohp);
+                intent.putExtra("noktp", holder.noktp);
+
                 view.getContext().startActivity(intent);
-                Toast.makeText(view.getContext(), "This is Detail", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -74,7 +86,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DatakuViewHold
     }
 
     public class DatakuViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener{
-        private TextView txtNama,txtNpm, id;
+        private TextView txtNama;
+        private TextView txtNpm;
+        private String id, nama, alamat, email, nohp, noktp;
         private LinearLayout detailCust;
         CardView card;
         ImageView ivprofile;
