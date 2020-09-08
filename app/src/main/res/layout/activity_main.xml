@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="#FFFFFF"
+    android:background="#F0F0F0"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -19,12 +19,12 @@
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:layout_gravity="center"
-            android:src="@mipmap/bicycle"/>
+            android:src="@mipmap/logobike"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="LOGIN"
+            android:text="SIGN IN"
             android:textSize="28dp"
             android:gravity="center"
             android:layout_marginTop="20dp"/>
@@ -62,7 +62,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_gravity="center"
-            android:background="@color/colorPrimary"
+            android:background="@color/colorAccent"
             android:text="LOGIN"
             android:textColor="#FFFFFF" />
 
@@ -75,7 +75,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't Have an Account?"
+                android:text="Belum Punya Akun?"
                 android:textSize="14dp"
                 android:layout_marginRight="10dp"/>
 
@@ -83,7 +83,7 @@
                 android:id="@+id/tvregister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Register"
+                android:text="Daftar"
                 android:textSize="14dp"
                 android:textColor="@color/colorPrimary"/>
 

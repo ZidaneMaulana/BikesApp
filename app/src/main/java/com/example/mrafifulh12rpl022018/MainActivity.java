@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AndroidNetworking.post("http://192.168.1.7/bike_booking/login.php")
-                        .addBodyParameter("email", txtemail.getText().toString())
+                AndroidNetworking.post("http://192.168.1.12/sepeda/login.php")
+                        .addBodyParameter("username", txtemail.getText().toString())
                         .addBodyParameter("password", txtpassword.getText().toString())
                         .setTag("test")
                         .setPriority(Priority.MEDIUM)
@@ -56,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
                             public void onResponse(JSONObject response) {
                                 // do anything with response
                                 try {
-                                    JSONObject hasil = response.getJSONObject("result");
+                                    JSONObject hasil = response.getJSONObject("hasil");
                                     Log.d("HANS", "url: " + hasil.toString());
-                                    Boolean respon= hasil.getBoolean("response");
+                                    Boolean respon= hasil.getBoolean("respon");
                                     if (respon){
                                         Toast.makeText(MainActivity.this, "Sukses Login", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(getApplicationContext(), MainMenu.class));

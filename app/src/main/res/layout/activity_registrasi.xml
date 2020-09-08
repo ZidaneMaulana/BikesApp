@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="#FFFFFF"
+    android:background="#F0F0F0"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -118,7 +118,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_gravity="center"
-            android:background="@color/colorPrimary"
+            android:background="@color/colorAccent"
             android:text="Register"
             android:textColor="#FFFFFF" />
 
@@ -132,7 +132,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Already Registered?"
+                android:text="Sudah Punya Akun?"
                 android:layout_marginRight="10dp"
                 android:textSize="14dp"/>
 
@@ -140,7 +140,7 @@
                 android:id="@+id/tvlogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Login"
+                android:text="Sign In"
                 android:textSize="14dp"
                 android:textColor="@color/colorPrimary"/>
 

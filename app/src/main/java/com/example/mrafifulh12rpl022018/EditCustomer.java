@@ -75,7 +75,7 @@ public class EditCustomer extends AppCompatActivity {
                 updtNohp = (EditText) findViewById(R.id.nohp);
                 updtNoktp = (EditText) findViewById(R.id.noktp);
 
-                AndroidNetworking.post("http://192.168.1.7/bike_booking/update.php")
+                AndroidNetworking.post("http://192.168.1.12/sepeda/update.php")
                         .addBodyParameter("id", updtId.getText().toString())
                         .addBodyParameter("nama", updtNama.getText().toString())
                         .addBodyParameter("email", updtEmail.getText().toString())

@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CUSTOMER DETAIL"
+        android:text="DETAIL"
         android:textColor="@color/black"
         android:textSize="34dp"
         android:textAlignment="center"

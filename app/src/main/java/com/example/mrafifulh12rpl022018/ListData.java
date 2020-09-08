@@ -37,7 +37,7 @@ public class ListData extends AppCompatActivity {
     }
 
     void addDataOnline(){
-        AndroidNetworking.get("http://192.168.1.7/bike_booking/customers/getCustomerAll.php")
+        AndroidNetworking.get("http://192.168.1.12/sepeda/getCustomerAll.php")
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
