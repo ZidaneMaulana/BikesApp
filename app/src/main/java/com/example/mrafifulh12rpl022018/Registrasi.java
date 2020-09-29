@@ -55,7 +55,7 @@ public class Registrasi extends AppCompatActivity {
                 if( !pass.equals(cpass) ){
                     Toast.makeText(Registrasi.this, "Password Tidak Sama!!!", Toast.LENGTH_SHORT).show();
                 }else{
-                    AndroidNetworking.post("http://192.168.1.12/sepeda/register.php")
+                    AndroidNetworking.post("http://192.168.6.4/sepeda/register.php")
                             .addBodyParameter("noktp", txtnoktp.getText().toString())
                             .addBodyParameter("email", txtemail.getText().toString())
                             .addBodyParameter("password", txtpassword.getText().toString())

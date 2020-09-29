@@ -31,13 +31,19 @@ public class ListData extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_data);
+        getSupportActionBar().hide();
         recyclerView = (RecyclerView) findViewById(R.id.rvdata);
 
         addDataOnline();
     }
 
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
     void addDataOnline(){
-        AndroidNetworking.get("http://192.168.1.12/sepeda/getCustomerAll.php")
+        AndroidNetworking.get("http://192.168.6.4/sepeda/getCustomerAll.php")
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -95,6 +101,7 @@ public class ListData extends AppCompatActivity {
                         Log.d("errorku", "onError errorDetail : " + error.getErrorDetail());
                     }
                 });
+
     }
 
 }

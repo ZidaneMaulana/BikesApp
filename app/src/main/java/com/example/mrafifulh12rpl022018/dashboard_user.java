@@ -7,14 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainMenu extends AppCompatActivity {
+public class dashboard_user extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_dashboard_user);
         getSupportActionBar().hide();
-        CardView menu1 = (CardView)findViewById(R.id.menu1);
+        CardView menu1 = (CardView)findViewById(R.id.kategori);
         menu1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

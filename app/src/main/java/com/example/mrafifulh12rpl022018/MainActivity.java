@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AndroidNetworking.post("http://192.168.1.12/sepeda/login.php")
+                AndroidNetworking.post("http://192.168.6.4/sepeda/login.php")
                         .addBodyParameter("username", txtemail.getText().toString())
                         .addBodyParameter("password", txtpassword.getText().toString())
                         .setTag("test")
@@ -59,9 +59,20 @@ public class MainActivity extends AppCompatActivity {
                                     JSONObject hasil = response.getJSONObject("hasil");
                                     Log.d("HANS", "url: " + hasil.toString());
                                     Boolean respon= hasil.getBoolean("respon");
+                                    String role = String.valueOf(hasil.getInt("roleuser"));
+                                    String email = hasil.getString("email");
+                                    Log.d("zd", "email: "+email);
                                     if (respon){
+                                        if (role.equalsIgnoreCase("1")){
+                                            Log.d("zd", "respon: "+role);
+                                            Intent i = new Intent(MainActivity.this,dashboard_user.class);
+                                            startActivity(i);
+                                        }
+                                        else {
+                                            Intent i = new Intent(MainActivity.this,MainMenu.class);
+                                            startActivity(i);
+                                        }
                                         Toast.makeText(MainActivity.this, "Sukses Login", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(getApplicationContext(), MainMenu.class));
                                     }else{
                                         Toast.makeText(MainActivity.this, "Gagal Login", Toast.LENGTH_SHORT).show();
                                     }

@@ -13,12 +13,13 @@ import android.widget.Toast;
 public class DetailCustomer extends AppCompatActivity {
 
     TextView txtnama, txtalamat, txtemail, txtnohp, txtnoktp;
-    Button objId;
+    Button Edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_customer);
+        getSupportActionBar().hide();
 
         String id = getIntent().getStringExtra("id");
         final String valueId = id.toString();
@@ -54,8 +55,8 @@ public class DetailCustomer extends AppCompatActivity {
         txtnoktp = (TextView) findViewById(R.id.noktp);
         txtnoktp.setText(noktp);
 
-        objId = (Button) findViewById(R.id.objId);
-        objId.setOnClickListener(new View.OnClickListener() {
+        Edit = (Button) findViewById(R.id.Edit);
+        Edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DetailCustomer.this, EditCustomer.class);

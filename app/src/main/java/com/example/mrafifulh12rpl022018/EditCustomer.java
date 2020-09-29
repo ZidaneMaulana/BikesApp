@@ -28,6 +28,7 @@ public class EditCustomer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_customer);
+        getSupportActionBar().hide();
 
         String id = getIntent().getStringExtra("id");
 
@@ -75,7 +76,7 @@ public class EditCustomer extends AppCompatActivity {
                 updtNohp = (EditText) findViewById(R.id.nohp);
                 updtNoktp = (EditText) findViewById(R.id.noktp);
 
-                AndroidNetworking.post("http://192.168.1.12/sepeda/update.php")
+                AndroidNetworking.post("http://192.168.6.4/sepeda/update.php")
                         .addBodyParameter("id", updtId.getText().toString())
                         .addBodyParameter("nama", updtNama.getText().toString())
                         .addBodyParameter("email", updtEmail.getText().toString())

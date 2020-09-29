@@ -9,6 +9,25 @@
     android:layout_height="match_parent"
     tools:context=".ListData">
 
+    <TextView
+        android:textSize="20sp"
+        android:elevation="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center"
+        android:text="LIST DATA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"/>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvdata"
         android:layout_width="match_parent"
